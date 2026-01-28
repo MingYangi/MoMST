@@ -10,11 +10,11 @@ from tmtools import tm_align
 
 from reward_utils import *
 
-import requests  # ym
-import json  # ym
-import torch  # ym
-from Bio.SeqUtils.ProtParam import ProteinAnalysis  # ym
-from scipy.stats import rankdata  # ym
+import requests  # momst
+import json  # momst
+import torch  # momst
+from Bio.SeqUtils.ProtParam import ProteinAnalysis  # momst
+from scipy.stats import rankdata  # momst
 
 pyrosetta.init(options="-mute all")
 
@@ -22,32 +22,18 @@ _HYDROPHOBICS = {"VAL", "ILE", "LEU", "PHE", "MET", "TRP"}
 
 
 def rank_normalize_scores(score_array):
-    """
-    使用秩转换（Rank Transformation）将一组分数客观地归一化到 [0, 1] 空间。
-    最高分映射到 1.0，最低分映射到 0.0。
-    该方法避免了对分数范围或主观参数（如温度）的依赖，客观地反映了奖励水平。
 
-    参数:
-        score_array (np.ndarray): 一个包含要归一化的分数的 NumPy 数组。
-                                  假设分数遵循“越大越好”的原则。
-    返回:
-        np.ndarray: 归一化后的 [0, 1] 分数数组。
-    """
     score_array = np.asarray(score_array)
     if not score_array.size:
         return np.array([])
 
     N = score_array.size
-    if N == 1:  # 只有一个样本时，它就是当前最好的，映射为 1.0
+    if N == 1:
         return np.array([1.0])
 
-    # 1. 计算秩：使用 'min' 方法处理并列分数。最高分得到最高秩。
-    # 由于原始分数已经是“越大越好”，直接计算秩即可。
     # Ranks is 1-based (1 to N)
     ranks = rankdata(score_array, method='min')
 
-    # 2. 缩放到 [0, 1]： (秩 - 最小秩) / (最大秩 - 最小秩)
-    # min_rank is 1, max_rank is N
     normalized_scores = (ranks - 1) / (N - 1)
 
     return normalized_scores
@@ -258,14 +244,13 @@ def pdb_to_surface_expose_score(gen_pdb_file, start=None, end=None):
     maximize surface exposure
     """
     # atom_array = strucio.load_structure(gen_pdb_file)
-    atom_array = pdb_file_to_atomarray(gen_pdb_file)  # 将PDB文件转换为原子数组格式，便于后续处理
+    atom_array = pdb_file_to_atomarray(gen_pdb_file)
 
-    start = 0 if start is None else start  # 如果没有指定范围，则计算整个蛋白质序列的表面暴露情况
+    start = 0 if start is None else start
     end = len(atom_array) if end is None else end
 
     residue_mask = np.array([res_id in list(range(start, end)) for res_id in atom_array.res_id])
-    surface = np.logical_and(residue_mask, sasa(atom_array))  # 使用 sasa() 函数计算每个原子的溶剂可及表面积，
-    # 然后与残基掩码进行逻辑与操作，得到在指定范围内的表面暴露残基
+    surface = np.logical_and(residue_mask, sasa(atom_array))
     return sum(surface) / sum(residue_mask)
 
 
@@ -273,18 +258,14 @@ def symmetry_score(gen_pdb_file, starts, ends, all_to_all_protomer_symmetry=Fals
     """
     starts: start residue index list
     ends: end residue index list
-
-    all_to_all_protomer_symmetry: True计算全对称，False计算相邻对称
-    return:
-        负的距离标准差（用于最大化优化）
     """
     atom_array = pdb_file_to_atomarray(gen_pdb_file)
 
     assert len(starts) == len(ends)
-    centers_of_mass = []  # 计算各对称单元的重心
+    centers_of_mass = []
     for i in range(len(starts)):
         start, end = starts[i], ends[i]
-        backbone_coordinates = get_backbone_atoms(  # 提取指定区段的主链原子（N,CA,C）
+        backbone_coordinates = get_backbone_atoms(
             atom_array[
                 np.logical_and(
                     atom_array.res_id >= start,
@@ -292,8 +273,8 @@ def symmetry_score(gen_pdb_file, starts, ends, all_to_all_protomer_symmetry=Fals
                 )
             ]
         ).coord
-        centers_of_mass.append(get_center_of_mass(backbone_coordinates))  # 计算该区段的重心坐标
-    centers_of_mass = np.vstack(centers_of_mass)  # 堆叠所有重心坐标 [N, 3]
+        centers_of_mass.append(get_center_of_mass(backbone_coordinates))
+    centers_of_mass = np.vstack(centers_of_mass)
 
     # compute the standard symmetry score
     if all_to_all_protomer_symmetry:
@@ -303,10 +284,10 @@ def symmetry_score(gen_pdb_file, starts, ends, all_to_all_protomer_symmetry=Fals
 
     return -symmetry_score_standard
 
-    # return (  # 计算对称性得分
-    #     -float(np.std(pairwise_distances(centers_of_mass)))  # 全对称模式：计算所有重心间距离的标准差
+    # return (
+    #     -float(np.std(pairwise_distances(centers_of_mass)))
     #     if all_to_all_protomer_symmetry
-    #     else -float(np.std(adjacent_distances(centers_of_mass)))  # 相邻对称模式：计算相邻重心间距离的标准差
+    #     else -float(np.std(adjacent_distances(centers_of_mass)))
     # )
 
 
@@ -317,10 +298,10 @@ def pdb_to_globularity_score(gen_pdb_file, start=None, end=None):
     # atom_array = strucio.load_structure(gen_pdb_file)
     atom_array = pdb_file_to_atomarray(gen_pdb_file)
 
-    start = 0 if start is None else start  # 设置计算范围的起始和结束位置，默认计算整个蛋白质序列
+    start = 0 if start is None else start
     end = len(atom_array) if end is None else end
 
-    backbone = get_backbone_atoms(  # 提取指定范围内的主链原子(N, CA, C原子)坐标
+    backbone = get_backbone_atoms(
         atom_array[
             np.logical_and(
                 atom_array.res_id >= start,
@@ -329,8 +310,8 @@ def pdb_to_globularity_score(gen_pdb_file, start=None, end=None):
         ]
     ).coord
 
-    center_of_mass = get_center_of_mass(backbone)  # 计算主链原子的重心坐标
-    m = backbone - center_of_mass  # 计算每个主链原子相对于重心的向量
+    center_of_mass = get_center_of_mass(backbone)
+    m = backbone - center_of_mass
 
     # computes the standard globularity score
     globularity_score_standard = float(np.std(np.linalg.norm(m, axis=-1)))  # [0, +∞) ↓
@@ -362,19 +343,18 @@ def set_diversity(sequences, masks):
     overall_diversity = np.sum(diversity_matrix) / (m ** 2)
     return overall_diversity.item()
 
-def extract_confidence_json(result_text):  # ym
+def extract_confidence_json(result_text):
     """
     使用JSON解析提取数据
     """
     try:
-        # 直接解析JSON数组
         result_list = json.loads(result_text)
         if len(result_list) >= 2:
-            return float(result_list[1])  # 返回第二个元素
+            return float(result_list[1])
     except json.JSONDecodeError:
         pass
     return None
-def seq_to_solubility(sequence):  # ym
+def seq_to_solubility(sequence):
     """
         :param sequence: protein sequence
         :return: predicted solubility
@@ -393,35 +373,19 @@ def seq_to_solubility(sequence):  # ym
     r = extract_confidence_json(r)
     return r
 
-# def likelihood(  # ym
-#     model, tokenizer,seq_len, tokenized_sample, repeat_num, device
-#     ):
-#     tokenized_sample = tokenized_sample
-#     mask = tokenizer.mask_id
-#     likelihood = torch.tensor([0.0] * repeat_num).to(device)
-#     timestep = torch.tensor([0] * repeat_num)  # placeholder but not called in model
-#     timestep = timestep.to(device)
-#     for k in range(seq_len):
-#         generated_sequence_mask = tokenized_sample.clone()
-#         generated_sequence_mask[:,k] = mask
-#         prediction = model(generated_sequence_mask, timestep)  # bs * seq len * dim
-#         p = torch.nn.functional.softmax(prediction, dim=1)
-#         likelihood += torch.log(p[ [i for i in range(repeat_num)], k, tokenized_sample[:,k]])
-#     return(likelihood.detach().cpu().numpy())
 
-
-def seq_to_general_fitness(  # ym
+def seq_to_general_fitness(
         model, tokenizer, seq_len, tokenized_sample, repeat_num, device
 ):
     tokenized_sample = tokenized_sample
     mask = tokenizer.mask_id
     likelihood = torch.tensor(0.0).to(device)
-    timestep = torch.tensor([0])  # 修改：单条序列的时间步
+    timestep = torch.tensor([0])
     timestep = timestep.to(device)
     for k in range(seq_len):
         generated_sequence_mask = tokenized_sample.clone()
         generated_sequence_mask[k] = mask
-        input_sequence = generated_sequence_mask.unsqueeze(0)  # 大多数深度学习模型期望输入是批次形式的，即使只有一条数据，也需要添加批次维度。
+        input_sequence = generated_sequence_mask.unsqueeze(0)
 
         prediction = model(input_sequence, timestep)  # bs(1) * seq len * dim
         p = torch.nn.functional.softmax(prediction, dim=1)
@@ -430,11 +394,8 @@ def seq_to_general_fitness(  # ym
 
 
 def seq_to_instability_index(sequence, target_ii=40, scale_factor=10):
-    protein_analyzer = ProteinAnalysis(sequence)  # 创建蛋白质分析对象
-    instability_index = protein_analyzer.instability_index()  # 计算不稳定指数
-    # 使用双曲正切函数创建平滑过渡的奖励
-    # 当 II < target_ii 时，奖励为正；II > target_ii 时，奖励为负
-    # 输出被平滑地压缩在 (-1, 1) 区间内
+    protein_analyzer = ProteinAnalysis(sequence)
+    instability_index = protein_analyzer.instability_index()
     reward = -torch.tanh(torch.tensor((instability_index - target_ii) / scale_factor))
     return reward
 
