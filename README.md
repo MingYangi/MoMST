@@ -3,4 +3,4 @@ Multi-objective Protein Design via Memory-aware Test-time Scaling in Diffusion M
 
 
 ## The Presentation of globularity and pLDDT result
-<video src="https://github.com/MingYangi/MoMST/releases/download/movie/globularity.plddt.mp4" width="800" controls></video>
+![globularity and pLDDT result](https://github.com/MingYangi/MoMST/blob/main/medias/resized_globularity%2Cplddt.gif)
