@@ -33,7 +33,10 @@ This repository implements **MOMST**, a framework for multi-objective protein se
 
 <b>Globularity + pLDDT</b>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<!-- <b>Hydrophobic + Globularity + pLDDT</b> -->
+<span style="margin-left:2000px;">
 <b>Hydrophobic + Globularity + pLDDT</b>
+</span>
 </div>
 
 
@@ -46,9 +49,7 @@ This repository implements **MOMST**, a framework for multi-objective protein se
 
 <b>Globularity + pLDDT</b>
 
-<span style="margin-left:2000px;">
-<b>Hydrophobic + Globularity + pLDDT</b>
-</span>
+
 </div>
 
 
