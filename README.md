@@ -50,6 +50,12 @@ conda activate MoMST
 pip install torch torchvision torchaudio
 pip install -r requirements.txt
 ```
+### Running the Code
+#### Multi-Objective Protein Design
+1.Globularity + pLDDT
+```
+CUDA_VISIBLE_DEVICES=0 python refinement.py --decoding momst  --repeatnum 10 --duplicate 20  --metrics_name globularity,plddt  --metrics_list 1,1 --iteration 20 --seq_length 150
+```
 
 ## Acknolwdgements
 Our codebase is heavily based on <a href="https://github.com/masa-ue/ProDifEvo-Refinement?tab=readme-ov-file">RERD</a>, evodiff(), openfold(), ESMfold().
