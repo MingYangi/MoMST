@@ -12,16 +12,7 @@ This repository implements **MOMST**, a framework for multi-objective protein se
 
 ## : Generated Proteins
 ### The Presentation of globularity and pLDDT result
-<p align="left">
-  <img src="https://github.com/MingYangi/MoMST/blob/main/medias/globularity%2Cplddt_1000.gif" width="20%">
-</p>
-<p align="center">
-   <img src="https://github.com/MingYangi/MoMST/blob/main/medias/hydrophobic%2Cglobularity%2Cplddt_1000.gif
-" width="35%">
-</p>
-
 <!-- <div align="center" style="display:flex; gap:20px; justify-content:center;">
-  
   <div>
     <img src="https://github.com/MingYangi/MoMST/blob/main/medias/globularity%2Cplddt_1000.gif?raw=true" width="20%">
     <p align="center"><b>Globularity + pLDDT</b><br>Structural compactness and confidence score visualization</p>
@@ -33,42 +24,19 @@ This repository implements **MOMST**, a framework for multi-objective protein se
   </div>
 
 </div>
-
 <div align="center"> -->
 
-</tr>
-</table>
-
-<table align="center" style="border-collapse: collapse; border: none;">
-<tr>
-
-<td align="center" width="50%" style="border: none; padding: 6px 20px;">
-<img src="https://github.com/MingYangi/MoMST/blob/main/medias/globularity%2Cplddt_1000.gif?raw=true" width="92%">
-<br><b>Globularity + pLDDT</b>
-</td>
-
-<td align="center" width="50%" style="border: none; padding: 6px 20px;">
-<img src="https://github.com/MingYangi/MoMST/blob/main/medias/hydrophobic%2Cglobularity%2Cplddt_1000.gif?raw=true" width="92%">
-<br><b>Hydrophobic + Globularity + pLDDT</b>
-</td>
-
-</tr>
-</table>
-
 <div align="center">
-
 <img src="https://github.com/MingYangi/MoMST/blob/main/medias/globularity%2Cplddt_1000.gif?raw=true" width="20%">
 &nbsp;&nbsp;&nbsp;&nbsp;
 <img src="https://github.com/MingYangi/MoMST/blob/main/medias/hydrophobic%2Cglobularity%2Cplddt_1000.gif?raw=true" width="20%">
-
-<br><br>
 
 <b>Globularity + pLDDT</b>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <b>Hydrophobic + Globularity + pLDDT</b>
 
-<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<!-- <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
 </div>
 
 
