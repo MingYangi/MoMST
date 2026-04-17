@@ -52,4 +52,4 @@ pip install -r requirements.txt
 ```
 
 ## Acknolwdgements
-Our codebase is heavily based on RERD(https://github.com/masa-ue/ProDifEvo-Refinement?tab=readme-ov-file), evodiff(), openfold(), ESMfold().
+Our codebase is heavily based on <a href="https://github.com/masa-ue/ProDifEvo-Refinement?tab=readme-ov-file">RERD</a>, evodiff(), openfold(), ESMfold().
