@@ -2,7 +2,8 @@
 
 <p align="center">
   :sparkles: Official implementation of our paper
-  
+</p>
+<p align="center">
   📰 paper | 🔗 code
 </p>
 
