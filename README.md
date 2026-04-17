@@ -13,7 +13,9 @@ This repository implements **MOMST**, a framework for multi-objective protein se
 ## : Generated Proteins
 ### The Presentation of globularity and pLDDT result
 <p align="left">
-  <img src="https://github.com/MingYangi/MoMST/blob/main/medias/resized_globularity%2Cplddt.gif" width="35%">
+  <img src="https://github.com/MingYangi/MoMST/blob/main/medias/globularity%2Cplddt_1000.gif" width="35%">
+  <img src="https://github.com/MingYangi/MoMST/blob/main/medias/hydrophobic%2Cglobularity%2Cplddt_1000.gif
+" width="35%">
 </p>
 
 ## 🚀 Quick Start
