@@ -49,3 +49,7 @@ conda create -n MoMST python=3.9
 conda activate MoMST
 pip install torch torchvision torchaudio
 pip install -r requirements.txt
+```
+
+## Acknolwdgements
+Our codebase is heavily based on RERD(https://github.com/masa-ue/ProDifEvo-Refinement?tab=readme-ov-file), evodiff(), openfold(), ESMfold().
