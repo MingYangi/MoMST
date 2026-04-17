@@ -15,7 +15,7 @@ This repository implements **MOMST**, a framework for multi-objective protein se
 <p align="left">
   <img src="https://github.com/MingYangi/MoMST/blob/main/medias/globularity%2Cplddt_1000.gif" width="20%">
 </p>
-<p align="left">
+<p align="center">
    <img src="https://github.com/MingYangi/MoMST/blob/main/medias/hydrophobic%2Cglobularity%2Cplddt_1000.gif
 " width="35%">
 </p>
