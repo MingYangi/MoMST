@@ -2,7 +2,7 @@
 
 :sparkles: Official implementation of our paper
 
-:paper: paper | code
+📰: paper | 🔗: code
 
 ## 🧠: Overview
 
