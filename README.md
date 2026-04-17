@@ -36,16 +36,16 @@ This repository implements **MOMST**, a framework for multi-objective protein se
 
 <div align="center">
 
-<div style="display:inline-block; width:45%; vertical-align:top; text-align:center;">
-  <img src="https://github.com/MingYangi/MoMST/blob/main/medias/globularity%2Cplddt_1000.gif?raw=true" width="20%"><br>
-  <b>Globularity + pLDDT</b><br>
-  Structural compactness
+<div align="center">
+
+<div style="display:inline-block; width:42%; text-align:center;">
+  <img src="...globularity...gif?raw=true" width="20%">
+  <br><b>Globularity + pLDDT</b>
 </div>
 
-<div style="display:inline-block; width:45%; vertical-align:top; text-align:center;">
-  <img src="https://github.com/MingYangi/MoMST/blob/main/medias/hydrophobic%2Cglobularity%2Cplddt_1000.gif?raw=true" width="20%"><br>
-  <b>Hydrophobic + Globularity + pLDDT</b><br>
-  Multi-objective optimization
+<div style="display:inline-block; width:42%; text-align:center;">
+  <img src="...hydrophobic...gif?raw=true" width="20%">
+  <br><b>Hydrophobic + Globularity + pLDDT</b>
 </div>
 
 </div>
