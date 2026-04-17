@@ -73,4 +73,4 @@ CUDA_VISIBLE_DEVICES=0 python refinement.py --decoding momst  --repeatnum 10 --d
 ```
 
 ## Acknolwdgements
-Our codebase is heavily based on <a href="https://github.com/masa-ue/ProDifEvo-Refinement?tab=readme-ov-file">RERD</a>, evodiff(), openfold(), ESMfold().
+Our codebase is heavily based on <a href="https://github.com/masa-ue/ProDifEvo-Refinement?tab=readme-ov-file">RERD</a>, <a href="https://github.com/microsoft/evodiff">evodiff</a>, <a href="https://openfold.io/">openfold</a>, <a href="https://github.com/facebookresearch/esm">ESMfold</a>.
