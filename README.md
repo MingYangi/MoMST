@@ -14,9 +14,9 @@ This repository implements **MOMST**, a framework for multi-objective protein se
 ### The Presentation of Result
 We present research results on the optimization of several fundamental structural objective functions. These include:
 
--Single-objective protein design, exemplified by optimizing the match_ss metric (e.g., from run XX_run1_0254_0003).
--Multi-objective design, utilizing a dual-objective combination of globularity and pLDDT.
--Multi-objective design, incorporating a triple-objective combination of hydrophobicity, globularity, and pLDDT.
+*Single-objective protein design, exemplified by optimizing the match_ss metric (e.g., from run XX_run1_0254_0003).
+*Multi-objective design, utilizing a dual-objective combination of globularity and pLDDT.
+*Multi-objective design, incorporating a triple-objective combination of hydrophobicity, globularity, and pLDDT.
 
 <!-- <div align="center" style="display:flex; gap:20px; justify-content:center;">
   <div>
