@@ -8,7 +8,7 @@
 </p>
 
 ## 🧠 Overview
-
+This repository implements **MOMST**, a framework for multi-objective protein sequence design. This framework alternates between noising and memory-guided denoising in diffusion models. By combining self-contrastive learning to extract residue-level preferences from historical trajectories with inference-time Pareto alignment, MOMST effectively balances conflicting functional rewards while strictly preserving the pre-trained model's sequence naturalness.
 
 ## : Generated Proteins
 ### The Presentation of globularity and pLDDT result
