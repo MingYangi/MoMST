@@ -66,48 +66,6 @@ This code puts several pdb files into ```./datasets/AlphaFoldPDB/```.
 ### Example of Running the Code
 Below is an explanation of the available options.
 
-<small>
-<table>
-<tr>
-  <th>Argument</th>
-  <th>Description</th>
-</tr>
-<tr>
-  <td><code>--decoding</code></td>
-  <td>Decoding method (<code>momst</code>, <code>SVDD_edit</code>, <code>SVDD</code>)</td>
-</tr>
-<tr>
-  <td><code>--repeatnum</code></td>
-  <td>Batch size</td>
-</tr>
-<tr>
-  <td><code>--duplicate</code></td>
-  <td>Number of candidates</td>
-</tr>
-<tr>
-  <td><code>--metrics_name</code></td>
-  <td>Reward functions</td>
-</tr>
-<tr>
-  <td><code>--metrics_list</code></td>
-  <td>Weights for rewards</td>
-</tr>
-<tr>
-  <td><code>--proteinname</code></td>
-  <td>Target PDB name</td>
-</tr>
-<tr>
-  <td><code>--iteration</code></td>
-  <td>Number of iterations</td>
-</tr>
-<tr>
-  <td><code>--seq_length</code></td>
-  <td>Protein length</td>
-</tr>
-</table>
-</small>
-
-
 | Argument | Description |
 |----------|------------|
 | `--decoding` | Decoding method (`momst`, `SVDD_edit`, `SVDD`) |
