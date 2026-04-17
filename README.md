@@ -38,13 +38,13 @@ This repository implements **MOMST**, a framework for multi-objective protein se
 
 <div align="center">
 <div style="display:inline-block; text-align:center;">
-  <img src="...gif?raw=true" width="20%"><br>
+  <img src="https://github.com/MingYangi/MoMST/blob/main/medias/globularity%2Cplddt_1000.gif?raw=true" width="20%"><br>
   <b>Globularity + pLDDT</b>
 </div>
 
 <div style="display:inline-block; width:60px;"></div>
 <div style="display:inline-block; text-align:center;">
-  <img src="...gif?raw=true" width="20%"><br>
+  <img src="https://github.com/MingYangi/MoMST/blob/main/medias/hydrophobic%2Cglobularity%2Cplddt_1000.gif?raw=true" width="20%"><br>
   <b>Hydrophobic + Globularity + pLDDT</b>
 </div>
 </div>
