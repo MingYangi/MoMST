@@ -50,7 +50,15 @@ conda activate MoMST
 pip install torch torchvision torchaudio
 pip install -r requirements.txt
 ```
+
+Also, to optimize ```match_ss``` and ```crmsd```, go to the ```./datasets``` folder and download the protein examples as shown below. You can also use any PDB files.
+```
+python download_model_data.py
+```
+This code puts several pdb files into ```./datasets/AlphaFoldPDB/```.
+
 ### Example of Running the Code
+Below is an explanation of the available options.
 #### Single-Objective Protein Design
 **1. SS (secondary structure) match**
 
