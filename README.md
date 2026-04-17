@@ -12,6 +12,12 @@ This repository implements **MOMST**, a framework for multi-objective protein se
 
 ## 🧬 Generated Proteins
 ### The Presentation of Result
+We present research results on the optimization of several fundamental structural objective functions. These include:
+
+-Single-objective protein design, exemplified by optimizing the match_ss metric (e.g., from run XX_run1_0254_0003).
+-Multi-objective design, utilizing a dual-objective combination of globularity and pLDDT.
+-Multi-objective design, incorporating a triple-objective combination of hydrophobicity, globularity, and pLDDT.
+
 <!-- <div align="center" style="display:flex; gap:20px; justify-content:center;">
   <div>
     <img src="https://github.com/MingYangi/MoMST/blob/main/medias/globularity%2Cplddt_1000.gif?raw=true" width="20%">
@@ -59,6 +65,18 @@ This code puts several pdb files into ```./datasets/AlphaFoldPDB/```.
 
 ### Example of Running the Code
 Below is an explanation of the available options.
+
+| Argument | Description |
+|----------|------------|
+| `--decoding` | Decoding method (`momst`, `SVDD_edit`, `SVDD`) |
+| `--repeatnum` | Batch size |
+| `--duplicate` | Number of andidates |
+| `--metrics_name` | Reward functions |
+| `--metrics_list` | Weights for rewards |
+| `--proteinname` | Target PDB name |
+| `--iteration` | Number of iterations |
+| `--seq_length` | Protein length |
+
 #### Single-Objective Protein Design
 **1. SS (secondary structure) match**
 
