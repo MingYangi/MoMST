@@ -49,7 +49,7 @@ Hydrophobic + Globularity + pLDDT
 
 ## 🚀 Quick Start
 ### Installation
-Install pytroch, pyrosseta. Then, run the following
+Install pytroch, <a href="https://www.pyrosetta.org/">pyrosseta</a>. Then, run the following
 ```python
 conda create -n MoMST python=3.9 
 conda activate MoMST
@@ -78,7 +78,7 @@ Below is an explanation of the available options.
 | `--seq_length` | Protein length |
 
 #### Single-Objective Protein Design
-**1. SS (secondary structure) match**
+**1. Secondary Structure match**
 
 Design a sequence that folds into a target secondary structure.
 ```
