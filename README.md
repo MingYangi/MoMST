@@ -104,5 +104,5 @@ The hydrophobicity-surface exposure-pLDDT combination suits therapeutic protein 
 CUDA_VISIBLE_DEVICES=0 python refinement.py --decoding momst  --repeatnum 10 --duplicate 20  --metrics_name hydrophobic,surface_expose,plddt  --metrics_list 1,1,1 --iteration 20 --seq_length 150
 ```
 
-## Acknolwdgements
+## :🎓 Acknolwdgements
 Our codebase is heavily based on <a href="https://github.com/masa-ue/ProDifEvo-Refinement?tab=readme-ov-file">RERD</a>, <a href="https://github.com/microsoft/evodiff">evodiff</a>, <a href="https://openfold.io/">openfold</a>, <a href="https://github.com/facebookresearch/esm">ESMfold</a>.
