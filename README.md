@@ -1,8 +1,9 @@
 # MoMST: Multi-objective Protein Design via Memory-aware Test-time Scaling in Diffusion Models
 
-:sparkles: Official implementation of our paper
-
-📰 paper | 🔗 code
+<p align="left">
+  :sparkles: Official implementation of our paper
+  📰 paper | 🔗 code
+</p>
 
 ## 🧠: Overview
 
