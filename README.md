@@ -20,7 +20,7 @@ This repository implements **MOMST**, a framework for multi-objective protein se
 " width="35%">
 </p>
 
-<div align="center" style="display:flex; gap:20px; justify-content:center;">
+<!-- <div align="center" style="display:flex; gap:20px; justify-content:center;">
   
   <div>
     <img src="https://github.com/MingYangi/MoMST/blob/main/medias/globularity%2Cplddt_1000.gif?raw=true" width="20%">
@@ -34,21 +34,44 @@ This repository implements **MOMST**, a framework for multi-objective protein se
 
 </div>
 
-<div align="center">
+<div align="center"> -->
 
-<div align="center">
+<table align="center" style="border-collapse: collapse; border: none;">
+<tr>
 
-<div style="display:inline-block; width:42%; text-align:center;">
-  <img src="...globularity...gif?raw=true" width="20%">
-  <br><b>Globularity + pLDDT</b>
-</div>
+<td align="center" width="50%" style="border: none; padding: 10px;">
+<img src="https://github.com/MingYangi/MoMST/blob/main/medias/globularity%2Cplddt_1000.gif?raw=true" width="20%"><br>
+<b>Globularity + pLDDT</b><br>
+Structural compactness
+</td>
 
-<div style="display:inline-block; width:42%; text-align:center;">
-  <img src="...hydrophobic...gif?raw=true" width="20%">
-  <br><b>Hydrophobic + Globularity + pLDDT</b>
-</div>
+<td align="center" width="50%" style="border: none; padding: 10px;">
+<img src="https://github.com/MingYangi/MoMST/blob/main/medias/hydrophobic%2Cglobularity%2Cplddt_1000.gif?raw=true" width="20%"><br>
+<b>Hydrophobic + Globularity + pLDDT</b><br>
+Multi-objective optimization
+</td>
 
-</div>
+</tr>
+</table>
+
+<table align="center" style="border-collapse: collapse; border: none;">
+<tr>
+
+<td align="center" width="50%" style="border: none; padding: 6px 20px;">
+<img src="https://github.com/MingYangi/MoMST/blob/main/medias/globularity%2Cplddt_1000.gif?raw=true" width="92%">
+<br><b>Globularity + pLDDT</b>
+<br><span style="font-size: 12px;">Structural compactness</span>
+</td>
+
+<td align="center" width="50%" style="border: none; padding: 6px 20px;">
+<img src="https://github.com/MingYangi/MoMST/blob/main/medias/hydrophobic%2Cglobularity%2Cplddt_1000.gif?raw=true" width="92%">
+<br><b>Hydrophobic + Globularity + pLDDT</b>
+<br><span style="font-size: 12px;">Multi-objective optimization</span>
+</td>
+
+</tr>
+</table>
+
 
 ## 🚀 Quick Start
 ### Installation
