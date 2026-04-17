@@ -107,7 +107,7 @@ Below is an explanation of the available options.
 </table>
 </small>
 
-<small>
+
 | Argument | Description |
 |----------|------------|
 | `--decoding` | Decoding method (`momst`, `SVDD_edit`, `SVDD`) |
@@ -118,7 +118,6 @@ Below is an explanation of the available options.
 | `--proteinname` | Target PDB name |
 | `--iteration` | Number of iterations |
 | `--seq_length` | Protein length |
-</small>
 
 #### Single-Objective Protein Design
 **1. SS (secondary structure) match**
