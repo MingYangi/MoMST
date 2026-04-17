@@ -52,18 +52,21 @@ pip install -r requirements.txt
 ```
 ### Running the Code
 #### Single-Objective Protein Design
-1.SS (secondary structure) match
+**SS (secondary structure) match**
+
 Design a sequence that folds into a target secondary structure.
 ```
 CUDA_VISIBLE_DEVICES=0 python refinement.py --decoding momst  --repeatnum 10 --duplicate 20  --metrics_name match_ss  --metrics_list 1 --proteinname XX_run1_0254_0003 --iteration 30
 ```
-2.cRMSD
+**cRMSD**
+
 Design a sequence that folds into a target structure based on cRMSD.
 ```
 CUDA_VISIBLE_DEVICES=0 python refinement.py --decoding momst  --repeatnum 20 --duplicate 20  --metrics_name crmsd  --metrics_list 1 --proteinname 5KPH --iteration 40
 ```
 #### Multi-Objective Protein Design
-1.Globularity + pLDDT
+**Globularity + pLDDT**
+
 The globularity-pLDDT combination provides structural confidence in a compact sphere for stable scaffold design.
 ```
 CUDA_VISIBLE_DEVICES=0 python refinement.py --decoding momst  --repeatnum 10 --duplicate 20  --metrics_name globularity,plddt  --metrics_list 1,1 --iteration 20 --seq_length 150
