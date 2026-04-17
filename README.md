@@ -7,10 +7,10 @@
   📰 paper | 🔗 <a href="https://github.com/MingYangi/MoMST/tree/main">code</a>
 </p>
 
-## 🧠: Overview
+## 🧠 Overview
 
 
-## Generated Proteins
+## :protein Generated Proteins
 ### The Presentation of globularity and pLDDT result
 <p align="left">
   <img src="https://github.com/MingYangi/MoMST/blob/main/medias/resized_globularity%2Cplddt.gif" width="35%">
