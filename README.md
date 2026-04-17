@@ -66,6 +66,7 @@ This code puts several pdb files into ```./datasets/AlphaFoldPDB/```.
 ### Example of Running the Code
 Below is an explanation of the available options.
 
+<small>
 | Argument | Description |
 |----------|------------|
 | `--decoding` | Decoding method (`momst`, `SVDD_edit`, `SVDD`) |
@@ -76,6 +77,7 @@ Below is an explanation of the available options.
 | `--proteinname` | Target PDB name |
 | `--iteration` | Number of iterations |
 | `--seq_length` | Protein length |
+</small>
 
 #### Single-Objective Protein Design
 **1. SS (secondary structure) match**
@@ -104,5 +106,5 @@ The hydrophobicity-surface exposure-pLDDT combination suits therapeutic protein 
 CUDA_VISIBLE_DEVICES=0 python refinement.py --decoding momst  --repeatnum 10 --duplicate 20  --metrics_name hydrophobic,surface_expose,plddt  --metrics_list 1,1,1 --iteration 20 --seq_length 150
 ```
 
-## :🎓 Acknolwdgements
+## 🎓 Acknolwdgements
 Our codebase is heavily based on <a href="https://github.com/masa-ue/ProDifEvo-Refinement?tab=readme-ov-file">RERD</a>, <a href="https://github.com/microsoft/evodiff">evodiff</a>, <a href="https://openfold.io/">openfold</a>, <a href="https://github.com/facebookresearch/esm">ESMfold</a>.
