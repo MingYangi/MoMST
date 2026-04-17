@@ -48,7 +48,7 @@ Hydrophobic + Globularity + pLDDT
 
 
 ## 🚀 Quick Start
-### Installation
+### ⚙️ Installation
 Install pytroch, <a href="https://www.pyrosetta.org/">pyrosseta</a>. Then, run the following
 ```python
 conda create -n MoMST python=3.9 
@@ -63,7 +63,7 @@ python download_model_data.py
 ```
 This code puts several pdb files into ```./datasets/AlphaFoldPDB/```.
 
-### Example of Running the Code
+### 🧑‍💻 Example of Running the Code
 Below is an explanation of the available options.
 
 | Argument | Description |
@@ -77,7 +77,7 @@ Below is an explanation of the available options.
 | `--iteration` | Number of iterations |
 | `--seq_length` | Protein length |
 
-#### Single-Objective Protein Design
+#### 🧬 Single-Objective Protein Design
 **1. Secondary Structure match**
 
 Design a sequence that folds into a target secondary structure.
@@ -90,7 +90,7 @@ Design a sequence that folds into a target structure based on cRMSD.
 ```
 CUDA_VISIBLE_DEVICES=0 python refinement.py --decoding momst  --repeatnum 20 --duplicate 20  --metrics_name crmsd  --metrics_list 1 --proteinname 5KPH --iteration 40
 ```
-#### Multi-Objective Protein Design
+#### 🧬 Multi-Objective Protein Design
 **1. Globularity + pLDDT**
 
 The globularity-pLDDT combination provides structural confidence in a compact sphere for stable scaffold design.
