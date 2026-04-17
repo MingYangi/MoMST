@@ -20,6 +20,20 @@ This repository implements **MOMST**, a framework for multi-objective protein se
 " width="35%">
 </p>
 
+<div align="center" style="display:flex; gap:20px; justify-content:center;">
+  
+  <div>
+    <img src="https://github.com/MingYangi/MoMST/blob/main/medias/globularity%2Cplddt_1000.gif?raw=true" width="100%">
+    <p align="center"><b>Globularity + pLDDT</b><br>Structural compactness and confidence score visualization</p>
+  </div>
+
+  <div>
+    <img src="https://github.com/MingYangi/MoMST/blob/main/medias/hydrophobic%2Cglobularity%2Cplddt_1000.gif?raw=true" width="100%">
+    <p align="center"><b>Hydrophobicity + Globularity + pLDDT</b><br>Multi-objective protein property optimization result</p>
+  </div>
+
+</div>
+
 ## 🚀 Quick Start
 ### Installation
 Install pytroch, pyrosseta. Then, run the following
