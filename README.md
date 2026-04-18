@@ -33,7 +33,7 @@ We present research results on the optimization of several fundamental structura
 <div align="center"> -->
 
 <div align="center">
-<img src="https://github.com/MingYangi/MoMST/blob/main/medias/XX_run1_0254_0003.png" width="20%">
+<img src="https://github.com/MingYangi/MoMST/blob/main/medias/EHEE_rd1_0101.png" width="20%">
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <img src="https://github.com/MingYangi/MoMST/blob/main/medias/globularity%2Cplddt.gif?raw=true" width="20%">
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
