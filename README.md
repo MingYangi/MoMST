@@ -68,17 +68,17 @@ Below is an explanation of the available options.
 
 | Argument | Description |
 |----------|------------|
-| `--decoding` | Decoding method (`momst`, `SVDD_edit`, `SVDD`) |
-| `--repeatnum` | Batch size |
-| `--duplicate` | Number of andidates |
-| `--metrics_name` | Reward functions |
-| `--metrics_list` | Weights for rewards |
-| `--proteinname` | Target PDB name |
-| `--iteration` | Number of iterations |
-| `--seq_length` | Protein length |
+| `--decoding` | decoding method (`momst`, `SVDD_edit`, `SVDD`) |
+| `--repeatnum` | batch size |
+| `--duplicate` | number of andidates |
+| `--metrics_name` | reward functions |
+| `--metrics_list` | weights for rewards |
+| `--proteinname` | target PDB name |
+| `--iteration` | number of iterations |
+| `--seq_length` | protein length |
 
 #### 🧬 Single-Objective Protein Design
-**1. Secondary Structure match**
+**1. Secondary Structure Match**
 
 Design a sequence that folds into a target secondary structure.
 ```
