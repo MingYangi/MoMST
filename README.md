@@ -4,7 +4,7 @@
   :sparkles: Official implementation of our paper
 </p>
 <p align="center">
-  📰 paper | 🔗 <a href="https://github.com/MingYangi/MoMST/tree/main">code</a>
+  📄 paper | 🔗 <a href="https://github.com/MingYangi/MoMST/tree/main">code</a>
 </p>
 
 ## 🧠 Overview
