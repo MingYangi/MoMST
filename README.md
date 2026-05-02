@@ -1,7 +1,7 @@
 # MoMST: Multi-objective Protein Design via Memory-aware Test-time Scaling in Diffusion Models
 
 <p align="center">
-  :sparkles: Official implementation of our paper
+  :sparkles: Official implementation of MoMST from ICML 2026.
 </p>
 <p align="center">
   📄 paper | 🔗 <a href="https://github.com/MingYangi/MoMST/tree/main">code</a>
