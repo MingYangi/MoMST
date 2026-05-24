@@ -1,4 +1,4 @@
-# Multi-objective Protein Design via Memory-aware Test-time Scaling in Diffusion Models
+# Multi-Objective Protein Design via Memory-Aware Test-Time Scaling in Diffusion Models
 
 <p align="center">
   :sparkles: Official implementation of MoMST from ICML 2026.
