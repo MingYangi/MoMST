@@ -367,7 +367,7 @@ if __name__ == "__main__":
             device=device
         )
     elif args.decoding == 'momst' and args.seed_design == 'False':
-        tokenized_sample, generated_sequence = generate_oaardm_reward_metrics_edit_momost(
+        tokenized_sample, generated_sequence = generate_oaardm_reward_metrics_edit_momst(
             model, tokenizer, seq_len, new_reward_model,
             ori_pdb_file_path=ori_pdb_file_path,
             batch = protein_name, 
