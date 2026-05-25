@@ -874,7 +874,7 @@ def generate_oaardm_reward_metrics_edit(
                 sample[iii, loc_set[iii]] = mask
 
 @torch.no_grad()
-def generate_oaardm_reward_metrics_edit_momost(
+def generate_oaardm_reward_metrics_edit_momst(
         model,
         tokenizer,
         seq_len,
