@@ -4,7 +4,7 @@
   :sparkles: Official implementation of MoMST from ICML 2026.
 </p>
 <p align="center">
-  📄 <a https://proceedings.mlr.press/v306/yang26du.html">paper</a> | 🔗 <a href="https://github.com/MingYangi/MoMST/tree/main">code</a>
+  📄 <a href="https://proceedings.mlr.press/v306/yang26du.html">paper</a> | 🔗 <a href="https://github.com/MingYangi/MoMST/tree/main">code</a>
 </p>
 
 ## 🧠 Overview
